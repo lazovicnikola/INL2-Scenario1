@@ -1,7 +1,3 @@
-# =============================
-# INL2 – Scenario 1 
-# =============================
-
 
 prog1 <- c(104,102,159,168,150,151,111,105,137,124)
 prog2 <- c(71.3,110,178,153,120,174,94.9,86.1,115,175)
@@ -18,7 +14,7 @@ cat("IDE-B mean:", mean(ideB), "median:", median(ideB), "\n")
 
 diffs <- ideA - ideB
 sh <- shapiro.test(diffs)
-print(sh)  # p > 0.05 => normal
+print(sh)  
 
 
 if (sh$p.value > 0.05) {
@@ -44,4 +40,5 @@ hist(ideB, main="Histogram IDE-B", xlab="Time (minutes)")
 
 plot(ideA, ideB, main="Scatter: IDE-A vs IDE-B",
      xlab="IDE-A time (minutes)", ylab="IDE-B time (minutes)")
-abline(0,1,col="red")  # referentna linija y=x
+abline(0,1,col="red") 
+
